@@ -2204,6 +2204,7 @@ resource "aws_wafv2_web_acl" "main" {
                       dynamic "headers" {
                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                         content {}
+                      }
                     }
                   }
                   regex_string = lookup(regex_match_statement.value, "regex_string")
@@ -2291,6 +2292,7 @@ resource "aws_wafv2_web_acl" "main" {
                       dynamic "headers" {
                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                         content {}
+                      }
                     }
                   }
                   text_transformation {
