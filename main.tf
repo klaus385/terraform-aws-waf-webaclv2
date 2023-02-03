@@ -178,7 +178,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -237,7 +237,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -330,7 +330,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -389,7 +389,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -463,7 +463,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -531,7 +531,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -590,7 +590,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -680,7 +680,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -756,7 +756,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                              all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                               included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                               excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                             }
@@ -815,7 +815,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                              all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                               included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                               excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                             }
@@ -898,7 +898,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                              all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                               included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                               excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                             }
@@ -973,7 +973,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -1032,7 +1032,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -1122,7 +1122,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -1186,7 +1186,7 @@ resource "aws_wafv2_web_acl" "main" {
                     dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                       content {
-                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                       }
@@ -1244,7 +1244,7 @@ resource "aws_wafv2_web_acl" "main" {
                     dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                       content {
-                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                       }
@@ -1339,7 +1339,7 @@ resource "aws_wafv2_web_acl" "main" {
                     dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                       content {
-                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                       }
@@ -1397,7 +1397,7 @@ resource "aws_wafv2_web_acl" "main" {
                     dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                       content {
-                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                       }
@@ -1473,7 +1473,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -1532,7 +1532,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -1615,7 +1615,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -1692,7 +1692,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -1751,7 +1751,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -1844,7 +1844,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -1903,7 +1903,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -2025,7 +2025,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                              all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                               included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                               excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                             }
@@ -2084,7 +2084,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                              all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                               included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                               excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                             }
@@ -2181,7 +2181,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -2240,7 +2240,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                        all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                         included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                         excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                       }
@@ -2343,7 +2343,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                              all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                               included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                               excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                             }
@@ -2402,7 +2402,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                              all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                               included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                               excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                             }
@@ -2502,7 +2502,7 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "match_pattern" {
                           for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                           content {
-                            all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                            all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                             included_headers = lower(lookup(match_pattern.value, "included_headers"))
                             excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                           }
@@ -2560,7 +2560,7 @@ resource "aws_wafv2_web_acl" "main" {
                           dynamic "match_pattern" {
                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                             content {
-                              all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                              all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                               included_headers = lower(lookup(match_pattern.value, "included_headers"))
                               excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                             }
@@ -2659,7 +2659,7 @@ resource "aws_wafv2_web_acl" "main" {
                           dynamic "match_pattern" {
                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                             content {
-                              all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                              all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                               included_headers = lower(lookup(match_pattern.value, "included_headers"))
                               excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                             }
@@ -2728,7 +2728,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -2787,7 +2787,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -2886,7 +2886,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -2949,7 +2949,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -3008,7 +3008,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -3107,7 +3107,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -3181,7 +3181,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -3240,7 +3240,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -3339,7 +3339,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                 included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                 excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                               }
@@ -3401,7 +3401,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -3460,7 +3460,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
@@ -3559,7 +3559,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      all              = lower(lookup(match_pattern.key, "all")) == "{}"
+                                      all              = lower(lookup(match_pattern.value, "all")) == "{}" ? "{}" : null
                                       included_headers = lower(lookup(match_pattern.value, "included_headers"))
                                       excluded_headers = lower(lookup(match_pattern.value, "excluded_headers"))
                                     }
