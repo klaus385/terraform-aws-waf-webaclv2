@@ -176,8 +176,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -228,8 +228,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -314,8 +314,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -366,8 +366,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -433,8 +433,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -494,8 +494,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -546,8 +546,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -629,8 +629,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -698,8 +698,8 @@ resource "aws_wafv2_web_acl" "main" {
                                         content {
                                           match_scope       = lower(lookup(headers.value, "match_scope"))
                                           match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                          }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                        }
                                       }
                                     }
                                   }
@@ -750,8 +750,8 @@ resource "aws_wafv2_web_acl" "main" {
                                         content {
                                           match_scope       = lower(lookup(headers.value, "match_scope"))
                                           match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                          }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                        }
                                       }
                                     }
                                   }
@@ -826,8 +826,8 @@ resource "aws_wafv2_web_acl" "main" {
                                         content {
                                           match_scope       = lower(lookup(headers.value, "match_scope"))
                                           match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                          }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                        }
                                       }
                                     }
                                   }
@@ -894,8 +894,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -946,8 +946,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -1029,8 +1029,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -1086,8 +1086,8 @@ resource "aws_wafv2_web_acl" "main" {
                   content {
                     match_scope       = lower(lookup(headers.value, "match_scope"))
                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                    }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                  }
                 }
               }
             }
@@ -1137,8 +1137,8 @@ resource "aws_wafv2_web_acl" "main" {
                   content {
                     match_scope       = lower(lookup(headers.value, "match_scope"))
                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                    }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                  }
                 }
               }
             }
@@ -1225,8 +1225,8 @@ resource "aws_wafv2_web_acl" "main" {
                   content {
                     match_scope       = lower(lookup(headers.value, "match_scope"))
                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                    }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                  }
                 }
               }
             }
@@ -1253,7 +1253,7 @@ resource "aws_wafv2_web_acl" "main" {
                 }
                 dynamic "body" {
                   for_each = length(lookup(field_to_match.value, "body", {})) == 0 ? [] : [lookup(field_to_match.value, "body")]
-                  content {
+                  cotent
                     #oversize_handling = upper(lookup(body.value, "oversize_handling"))
                   }
                 }
@@ -1276,8 +1276,8 @@ resource "aws_wafv2_web_acl" "main" {
                   content {
                     match_scope       = lower(lookup(headers.value, "match_scope"))
                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                    }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                  }
                 }
               }
             }
@@ -1345,8 +1345,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -1397,8 +1397,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -1473,8 +1473,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -1543,8 +1543,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -1595,8 +1595,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -1681,8 +1681,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -1733,8 +1733,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -1848,8 +1848,8 @@ resource "aws_wafv2_web_acl" "main" {
                                         content {
                                           match_scope       = lower(lookup(headers.value, "match_scope"))
                                           match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                          }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                        }
                                       }
                                     }
                                   }
@@ -1900,8 +1900,8 @@ resource "aws_wafv2_web_acl" "main" {
                                         content {
                                           match_scope       = lower(lookup(headers.value, "match_scope"))
                                           match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                          }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                        }
                                       }
                                     }
                                   }
@@ -1990,8 +1990,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -2042,8 +2042,8 @@ resource "aws_wafv2_web_acl" "main" {
                                   content {
                                     match_scope       = lower(lookup(headers.value, "match_scope"))
                                     match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                    }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  }
                                 }
                               }
                             }
@@ -2138,8 +2138,8 @@ resource "aws_wafv2_web_acl" "main" {
                                         content {
                                           match_scope       = lower(lookup(headers.value, "match_scope"))
                                           match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                          }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                        }
                                       }
                                     }
                                   }
@@ -2190,8 +2190,8 @@ resource "aws_wafv2_web_acl" "main" {
                                         content {
                                           match_scope       = lower(lookup(headers.value, "match_scope"))
                                           match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                          }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                        }
                                       }
                                     }
                                   }
@@ -2283,8 +2283,8 @@ resource "aws_wafv2_web_acl" "main" {
                       content {
                         match_scope       = lower(lookup(headers.value, "match_scope"))
                         match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                        }
                         oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                      }
                     }
                   }
                   positional_constraint = lookup(byte_match_statement.value, "positional_constraint")
@@ -2334,8 +2334,8 @@ resource "aws_wafv2_web_acl" "main" {
                         content {
                           match_scope       = lower(lookup(headers.value, "match_scope"))
                           match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                          }
                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                        }
                       }
                     }
                   }
@@ -2426,8 +2426,8 @@ resource "aws_wafv2_web_acl" "main" {
                         content {
                           match_scope       = lower(lookup(headers.value, "match_scope"))
                           match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                          }
                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                        }
                       }
                     }
                   }
@@ -2488,8 +2488,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -2540,8 +2540,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -2632,8 +2632,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -2688,8 +2688,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -2740,8 +2740,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -2832,8 +2832,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -2899,8 +2899,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -2951,8 +2951,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -3043,8 +3043,8 @@ resource "aws_wafv2_web_acl" "main" {
                           content {
                             match_scope       = lower(lookup(headers.value, "match_scope"))
                             match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                            }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          }
                         }
                       }
                     }
@@ -3098,8 +3098,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -3150,8 +3150,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
@@ -3242,8 +3242,8 @@ resource "aws_wafv2_web_acl" "main" {
                                 content {
                                   match_scope       = lower(lookup(headers.value, "match_scope"))
                                   match_pattern     = { for k, v in lookup(headers.value, "match_pattern") : lower(k) => lower(v) }
-                                  }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                }
                               }
                             }
                           }
