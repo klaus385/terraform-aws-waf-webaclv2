@@ -174,9 +174,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -228,9 +231,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -316,9 +322,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -370,9 +379,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -439,9 +451,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -502,9 +517,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -556,9 +574,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -641,9 +662,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -712,9 +736,12 @@ resource "aws_wafv2_web_acl" "main" {
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                         content {
-                                          match_scope       = lower(lookup(headers.value, "match_scope"))
-                                          match_pattern     = {
+                                          match_scope = lower(lookup(headers.value, "match_scope"))
+                                          dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                            content {
+                                              match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                            }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                         }
@@ -766,9 +793,12 @@ resource "aws_wafv2_web_acl" "main" {
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                         content {
-                                          match_scope       = lower(lookup(headers.value, "match_scope"))
-                                          match_pattern     = {
+                                          match_scope = lower(lookup(headers.value, "match_scope"))
+                                          dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                            content {
+                                              match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                            }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                         }
@@ -844,9 +874,12 @@ resource "aws_wafv2_web_acl" "main" {
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                         content {
-                                          match_scope       = lower(lookup(headers.value, "match_scope"))
-                                          match_pattern     = {
+                                          match_scope = lower(lookup(headers.value, "match_scope"))
+                                          dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                            content {
+                                              match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                            }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                         }
@@ -914,9 +947,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -968,9 +1004,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -1053,9 +1092,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -1112,9 +1154,12 @@ resource "aws_wafv2_web_acl" "main" {
                 dynamic "headers" {
                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                   content {
-                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                    match_pattern     = {
+                    match_scope = lower(lookup(headers.value, "match_scope"))
+                    dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                      content {
+                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                      }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                   }
@@ -1165,9 +1210,12 @@ resource "aws_wafv2_web_acl" "main" {
                 dynamic "headers" {
                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                   content {
-                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                    match_pattern     = {
+                    match_scope = lower(lookup(headers.value, "match_scope"))
+                    dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                      content {
+                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                      }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                   }
@@ -1255,9 +1303,12 @@ resource "aws_wafv2_web_acl" "main" {
                 dynamic "headers" {
                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                   content {
-                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                    match_pattern     = {
+                    match_scope = lower(lookup(headers.value, "match_scope"))
+                    dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                      content {
+                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                      }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                   }
@@ -1308,9 +1359,12 @@ resource "aws_wafv2_web_acl" "main" {
                 dynamic "headers" {
                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                   content {
-                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                    match_pattern     = {
+                    match_scope = lower(lookup(headers.value, "match_scope"))
+                    dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                      content {
+                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                      }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                   }
@@ -1379,9 +1433,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -1433,9 +1490,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -1511,9 +1571,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -1583,9 +1646,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -1637,9 +1703,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -1725,9 +1794,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -1779,9 +1851,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -1896,9 +1971,12 @@ resource "aws_wafv2_web_acl" "main" {
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                         content {
-                                          match_scope       = lower(lookup(headers.value, "match_scope"))
-                                          match_pattern     = {
+                                          match_scope = lower(lookup(headers.value, "match_scope"))
+                                          dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                            content {
+                                              match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                            }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                         }
@@ -1950,9 +2028,12 @@ resource "aws_wafv2_web_acl" "main" {
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                         content {
-                                          match_scope       = lower(lookup(headers.value, "match_scope"))
-                                          match_pattern     = {
+                                          match_scope = lower(lookup(headers.value, "match_scope"))
+                                          dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                            content {
+                                              match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                            }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                         }
@@ -2042,9 +2123,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -2096,9 +2180,12 @@ resource "aws_wafv2_web_acl" "main" {
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                   content {
-                                    match_scope       = lower(lookup(headers.value, "match_scope"))
-                                    match_pattern     = {
+                                    match_scope = lower(lookup(headers.value, "match_scope"))
+                                    dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                      content {
+                                        match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                      }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                   }
@@ -2194,9 +2281,12 @@ resource "aws_wafv2_web_acl" "main" {
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                         content {
-                                          match_scope       = lower(lookup(headers.value, "match_scope"))
-                                          match_pattern     = {
+                                          match_scope = lower(lookup(headers.value, "match_scope"))
+                                          dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                            content {
+                                              match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                            }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                         }
@@ -2248,9 +2338,12 @@ resource "aws_wafv2_web_acl" "main" {
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                         content {
-                                          match_scope       = lower(lookup(headers.value, "match_scope"))
-                                          match_pattern     = {
+                                          match_scope = lower(lookup(headers.value, "match_scope"))
+                                          dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                            content {
+                                              match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                            }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                         }
@@ -2343,9 +2436,12 @@ resource "aws_wafv2_web_acl" "main" {
                     dynamic "headers" {
                       for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                       content {
-                        match_scope       = lower(lookup(headers.value, "match_scope"))
-                        match_pattern     = {
+                        match_scope = lower(lookup(headers.value, "match_scope"))
+                        dynamic "match_pattern" {
                           for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                          content {
+                            match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                          }
                         }
                         oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                       }
@@ -2396,9 +2492,12 @@ resource "aws_wafv2_web_acl" "main" {
                       dynamic "headers" {
                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                         content {
-                          match_scope       = lower(lookup(headers.value, "match_scope"))
-                          match_pattern     = {
+                          match_scope = lower(lookup(headers.value, "match_scope"))
+                          dynamic "match_pattern" {
                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                            content {
+                              match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                            }
                           }
                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                         }
@@ -2490,9 +2589,12 @@ resource "aws_wafv2_web_acl" "main" {
                       dynamic "headers" {
                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                         content {
-                          match_scope       = lower(lookup(headers.value, "match_scope"))
-                          match_pattern     = {
+                          match_scope = lower(lookup(headers.value, "match_scope"))
+                          dynamic "match_pattern" {
                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                            content {
+                              match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                            }
                           }
                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                         }
@@ -2554,9 +2656,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -2608,9 +2713,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -2702,9 +2810,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -2760,9 +2871,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -2814,9 +2928,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -2908,9 +3025,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -2977,9 +3097,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -3031,9 +3154,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -3125,9 +3251,12 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                           content {
-                            match_scope       = lower(lookup(headers.value, "match_scope"))
-                            match_pattern     = {
+                            match_scope = lower(lookup(headers.value, "match_scope"))
+                            dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                              content {
+                                match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                              }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -3182,9 +3311,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -3236,9 +3368,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -3330,9 +3465,12 @@ resource "aws_wafv2_web_acl" "main" {
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
                                 content {
-                                  match_scope       = lower(lookup(headers.value, "match_scope"))
-                                  match_pattern     = {
+                                  match_scope = lower(lookup(headers.value, "match_scope"))
+                                  dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
+                                    content {
+                                      match_pattern = { for k, v in lookup(match_pattern.value, "match_pattern") : lower(k) => lower(v) }
+                                    }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
