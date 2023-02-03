@@ -178,7 +178,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -235,7 +235,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -326,7 +326,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -383,7 +383,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -455,7 +455,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -521,7 +521,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -578,7 +578,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -666,7 +666,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -740,7 +740,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                              match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -797,7 +797,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                              match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -878,7 +878,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                              match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -951,7 +951,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1008,7 +1008,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1096,7 +1096,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1158,7 +1158,7 @@ resource "aws_wafv2_web_acl" "main" {
                     dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                       content {
-                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                       }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1214,7 +1214,7 @@ resource "aws_wafv2_web_acl" "main" {
                     dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                       content {
-                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                       }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1307,7 +1307,7 @@ resource "aws_wafv2_web_acl" "main" {
                     dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                       content {
-                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                       }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1363,7 +1363,7 @@ resource "aws_wafv2_web_acl" "main" {
                     dynamic "match_pattern" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                       content {
-                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                       }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1437,7 +1437,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1494,7 +1494,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1575,7 +1575,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1650,7 +1650,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1707,7 +1707,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1798,7 +1798,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1855,7 +1855,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1975,7 +1975,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                              match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2032,7 +2032,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                              match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2127,7 +2127,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2184,7 +2184,7 @@ resource "aws_wafv2_web_acl" "main" {
                                     dynamic "match_pattern" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                       content {
-                                        match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                        match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2285,7 +2285,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                              match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2342,7 +2342,7 @@ resource "aws_wafv2_web_acl" "main" {
                                           dynamic "match_pattern" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                             content {
-                                              match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                              match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2440,7 +2440,7 @@ resource "aws_wafv2_web_acl" "main" {
                         dynamic "match_pattern" {
                           for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                           content {
-                            match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                            match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                           }
                         }
                         oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2496,7 +2496,7 @@ resource "aws_wafv2_web_acl" "main" {
                           dynamic "match_pattern" {
                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                             content {
-                              match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                              match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                             }
                           }
                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2593,7 +2593,7 @@ resource "aws_wafv2_web_acl" "main" {
                           dynamic "match_pattern" {
                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                             content {
-                              match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                              match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                             }
                           }
                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2660,7 +2660,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2717,7 +2717,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2814,7 +2814,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2875,7 +2875,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2932,7 +2932,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3029,7 +3029,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3101,7 +3101,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3158,7 +3158,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3255,7 +3255,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                               content {
-                                match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3315,7 +3315,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3372,7 +3372,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3469,7 +3469,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern")]
                                     content {
-                                      match_pattern = { lower(lookup(match_pattern.value, "match_pattern")) }
+                                      match_pattern = lower(lookup(match_pattern.value, "match_pattern"))
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
