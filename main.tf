@@ -177,11 +177,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -236,11 +232,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -329,11 +321,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -388,11 +376,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -462,11 +446,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -1472,11 +1452,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -1531,11 +1507,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -1614,11 +1586,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -1691,11 +1659,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -1750,11 +1714,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -2727,11 +2687,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -2786,11 +2742,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -2885,11 +2837,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -2948,11 +2896,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -3007,11 +2951,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -3106,11 +3046,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -3180,11 +3116,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -3239,11 +3171,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -3338,11 +3266,7 @@ resource "aws_wafv2_web_acl" "main" {
                             match_scope = lower(lookup(headers.value, "match_scope"))
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {
-
-
-
-                              }
+                              content {}
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                           }
@@ -3400,11 +3324,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -3459,11 +3379,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
@@ -3558,11 +3474,7 @@ resource "aws_wafv2_web_acl" "main" {
                                   match_scope = lower(lookup(headers.value, "match_scope"))
                                   dynamic "match_pattern" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {
-
-
-
-                                    }
+                                    content {}
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                                 }
