@@ -173,14 +173,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -228,14 +221,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -317,14 +303,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -372,14 +351,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -442,14 +414,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -506,18 +471,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -565,18 +519,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -655,18 +598,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -731,18 +663,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       }
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                        content {
-                                          match_scope = lower(lookup(headers.value, "match_scope"))
-                                          dynamic "match_pattern" {
-                                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                            content {
-
-
-
-                                            }
-                                          }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                        }
+                                        content {}
                                       }
                                     }
                                   }
@@ -790,18 +711,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       }
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                        content {
-                                          match_scope = lower(lookup(headers.value, "match_scope"))
-                                          dynamic "match_pattern" {
-                                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                            content {
-
-
-
-                                            }
-                                          }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                        }
+                                        content {}
                                       }
                                     }
                                   }
@@ -873,18 +783,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       }
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                        content {
-                                          match_scope = lower(lookup(headers.value, "match_scope"))
-                                          dynamic "match_pattern" {
-                                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                            content {
-
-
-
-                                            }
-                                          }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                        }
+                                        content {}
                                       }
                                     }
                                   }
@@ -948,18 +847,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -1007,18 +895,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -1097,18 +974,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -1161,18 +1027,7 @@ resource "aws_wafv2_web_acl" "main" {
                 }
                 dynamic "headers" {
                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                  content {
-                    match_scope = lower(lookup(headers.value, "match_scope"))
-                    dynamic "match_pattern" {
-                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                      content {
-
-
-
-                      }
-                    }
-                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                  }
+                  content {}
                 }
               }
             }
@@ -1219,18 +1074,7 @@ resource "aws_wafv2_web_acl" "main" {
                 }
                 dynamic "headers" {
                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                  content {
-                    match_scope = lower(lookup(headers.value, "match_scope"))
-                    dynamic "match_pattern" {
-                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                      content {
-
-
-
-                      }
-                    }
-                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                  }
+                  content {}
                 }
               }
             }
@@ -1314,18 +1158,7 @@ resource "aws_wafv2_web_acl" "main" {
                 }
                 dynamic "headers" {
                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                  content {
-                    match_scope = lower(lookup(headers.value, "match_scope"))
-                    dynamic "match_pattern" {
-                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                      content {
-
-
-
-                      }
-                    }
-                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                  }
+                  content {}
                 }
               }
             }
@@ -1372,18 +1205,7 @@ resource "aws_wafv2_web_acl" "main" {
                 }
                 dynamic "headers" {
                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                  content {
-                    match_scope = lower(lookup(headers.value, "match_scope"))
-                    dynamic "match_pattern" {
-                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                      content {
-
-
-
-                      }
-                    }
-                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                  }
+                  content {}
                 }
               }
             }
@@ -1448,14 +1270,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -1503,14 +1318,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -1582,14 +1390,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -1655,14 +1456,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -1710,14 +1504,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -1799,18 +1586,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -1858,18 +1634,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -1980,18 +1745,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       }
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                        content {
-                                          match_scope = lower(lookup(headers.value, "match_scope"))
-                                          dynamic "match_pattern" {
-                                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                            content {
-
-
-
-                                            }
-                                          }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                        }
+                                        content {}
                                       }
                                     }
                                   }
@@ -2039,18 +1793,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       }
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                        content {
-                                          match_scope = lower(lookup(headers.value, "match_scope"))
-                                          dynamic "match_pattern" {
-                                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                            content {
-
-
-
-                                            }
-                                          }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                        }
+                                        content {}
                                       }
                                     }
                                   }
@@ -2136,18 +1879,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -2195,18 +1927,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 }
                                 dynamic "headers" {
                                   for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                  content {
-                                    match_scope = lower(lookup(headers.value, "match_scope"))
-                                    dynamic "match_pattern" {
-                                      for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                      content {
-
-
-
-                                      }
-                                    }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                  }
+                                  content {}
                                 }
                               }
                             }
@@ -2298,18 +2019,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       }
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                        content {
-                                          match_scope = lower(lookup(headers.value, "match_scope"))
-                                          dynamic "match_pattern" {
-                                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                            content {
-
-
-
-                                            }
-                                          }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                        }
+                                        content {}
                                       }
                                     }
                                   }
@@ -2357,18 +2067,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       }
                                       dynamic "headers" {
                                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                        content {
-                                          match_scope = lower(lookup(headers.value, "match_scope"))
-                                          dynamic "match_pattern" {
-                                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                            content {
-
-
-
-                                            }
-                                          }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                        }
+                                        content {}
                                       }
                                     }
                                   }
@@ -2457,18 +2156,7 @@ resource "aws_wafv2_web_acl" "main" {
                     }
                     dynamic "headers" {
                       for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                      content {
-                        match_scope = lower(lookup(headers.value, "match_scope"))
-                        dynamic "match_pattern" {
-                          for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                          content {
-
-
-
-                          }
-                        }
-                        oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                      }
+                      content {}
                     }
                   }
                   positional_constraint = lookup(byte_match_statement.value, "positional_constraint")
@@ -2515,19 +2203,7 @@ resource "aws_wafv2_web_acl" "main" {
                       }
                       dynamic "headers" {
                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                        content {
-                          match_scope = lower(lookup(headers.value, "match_scope"))
-                          dynamic "match_pattern" {
-                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                            content {
-
-
-
-                            }
-                          }
-                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                        }
-                      }
+                        content {}
                     }
                   }
                   regex_string = lookup(regex_match_statement.value, "regex_string")
@@ -2614,19 +2290,7 @@ resource "aws_wafv2_web_acl" "main" {
                       }
                       dynamic "headers" {
                         for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                        content {
-                          match_scope = lower(lookup(headers.value, "match_scope"))
-                          dynamic "match_pattern" {
-                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                            content {
-
-
-
-                            }
-                          }
-                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                        }
-                      }
+                        content {}
                     }
                   }
                   text_transformation {
@@ -2683,14 +2347,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -2738,14 +2395,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -2833,14 +2483,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -2892,14 +2535,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -2947,14 +2583,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -3042,14 +2671,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -3112,14 +2734,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -3167,14 +2782,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -3262,14 +2870,7 @@ resource "aws_wafv2_web_acl" "main" {
                         }
                         dynamic "headers" {
                           for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                          content {
-                            match_scope = lower(lookup(headers.value, "match_scope"))
-                            dynamic "match_pattern" {
-                              for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                              content {}
-                            }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                          }
+                          content {}
                         }
                       }
                     }
@@ -3320,14 +2921,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -3375,14 +2969,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
@@ -3470,14 +3057,7 @@ resource "aws_wafv2_web_acl" "main" {
                               }
                               dynamic "headers" {
                                 for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                                content {
-                                  match_scope = lower(lookup(headers.value, "match_scope"))
-                                  dynamic "match_pattern" {
-                                    for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                                    content {}
-                                  }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
-                                }
+                                content {}
                               }
                             }
                           }
