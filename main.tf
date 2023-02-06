@@ -178,7 +178,7 @@ resource "aws_wafv2_web_acl" "main" {
                             dynamic "match_pattern" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
-                                all              = lookup(match_pattern.value, "all") lookup(match_pattern.value, "all")
+                                all              = lookup(match_pattern.value, "all")
                                 included_headers = lookup(match_pattern.value, "included_headers")
                                 excluded_headers = lookup(match_pattern.value, "excluded_headers")
                               }
