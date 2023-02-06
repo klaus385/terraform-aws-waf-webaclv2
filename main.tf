@@ -185,7 +185,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -246,7 +246,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -341,7 +341,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -402,7 +402,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -478,7 +478,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -548,7 +548,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -609,7 +609,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -701,7 +701,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -779,7 +779,7 @@ resource "aws_wafv2_web_acl" "main" {
                                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                             }
                                           }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                          oversize_handling = lookup(headers.value, "oversize_handling")
                                         }
                                       }
                                     }
@@ -840,7 +840,7 @@ resource "aws_wafv2_web_acl" "main" {
                                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                             }
                                           }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                          oversize_handling = lookup(headers.value, "oversize_handling")
                                         }
                                       }
                                     }
@@ -925,7 +925,7 @@ resource "aws_wafv2_web_acl" "main" {
                                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                             }
                                           }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                          oversize_handling = lookup(headers.value, "oversize_handling")
                                         }
                                       }
                                     }
@@ -1002,7 +1002,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -1063,7 +1063,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -1155,7 +1155,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -1221,7 +1221,7 @@ resource "aws_wafv2_web_acl" "main" {
                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                       }
                     }
-                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                    oversize_handling = lookup(headers.value, "oversize_handling")
                   }
                 }
               }
@@ -1281,7 +1281,7 @@ resource "aws_wafv2_web_acl" "main" {
                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                       }
                     }
-                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                    oversize_handling = lookup(headers.value, "oversize_handling")
                   }
                 }
               }
@@ -1378,7 +1378,7 @@ resource "aws_wafv2_web_acl" "main" {
                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                       }
                     }
-                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                    oversize_handling = lookup(headers.value, "oversize_handling")
                   }
                 }
               }
@@ -1438,7 +1438,7 @@ resource "aws_wafv2_web_acl" "main" {
                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                       }
                     }
-                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                    oversize_handling = lookup(headers.value, "oversize_handling")
                   }
                 }
               }
@@ -1516,7 +1516,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -1577,7 +1577,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -1662,7 +1662,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -1741,7 +1741,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -1802,7 +1802,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -1897,7 +1897,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -1958,7 +1958,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -2082,7 +2082,7 @@ resource "aws_wafv2_web_acl" "main" {
                                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                             }
                                           }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                          oversize_handling = lookup(headers.value, "oversize_handling")
                                         }
                                       }
                                     }
@@ -2143,7 +2143,7 @@ resource "aws_wafv2_web_acl" "main" {
                                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                             }
                                           }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                          oversize_handling = lookup(headers.value, "oversize_handling")
                                         }
                                       }
                                     }
@@ -2242,7 +2242,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -2303,7 +2303,7 @@ resource "aws_wafv2_web_acl" "main" {
                                         # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                       }
                                     }
-                                    oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                    oversize_handling = lookup(headers.value, "oversize_handling")
                                   }
                                 }
                               }
@@ -2408,7 +2408,7 @@ resource "aws_wafv2_web_acl" "main" {
                                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                             }
                                           }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                          oversize_handling = lookup(headers.value, "oversize_handling")
                                         }
                                       }
                                     }
@@ -2469,7 +2469,7 @@ resource "aws_wafv2_web_acl" "main" {
                                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                             }
                                           }
-                                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                          oversize_handling = lookup(headers.value, "oversize_handling")
                                         }
                                       }
                                     }
@@ -2570,7 +2570,7 @@ resource "aws_wafv2_web_acl" "main" {
                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                             }
                           }
-                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          oversize_handling = lookup(headers.value, "oversize_handling")
                         }
                       }
                     }
@@ -2631,7 +2631,7 @@ resource "aws_wafv2_web_acl" "main" {
                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                             }
                           }
-                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          oversize_handling = lookup(headers.value, "oversize_handling")
                         }
                       }
                     }
@@ -2732,7 +2732,7 @@ resource "aws_wafv2_web_acl" "main" {
                               # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                             }
                           }
-                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                          oversize_handling = lookup(headers.value, "oversize_handling")
                         }
                       }
                     }
@@ -2803,7 +2803,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -2864,7 +2864,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -2965,7 +2965,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -3030,7 +3030,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -3091,7 +3091,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -3192,7 +3192,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -3268,7 +3268,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -3329,7 +3329,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -3430,7 +3430,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
-                            oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                            oversize_handling = lookup(headers.value, "oversize_handling")
                           }
                         }
                       }
@@ -3494,7 +3494,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -3555,7 +3555,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
@@ -3656,7 +3656,7 @@ resource "aws_wafv2_web_acl" "main" {
                                       # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                                     }
                                   }
-                                  oversize_handling = lower(lookup(headers.value, "oversize_handling"))
+                                  oversize_handling = lookup(headers.value, "oversize_handling")
                                 }
                               }
                             }
