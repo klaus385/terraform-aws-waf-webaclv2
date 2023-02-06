@@ -179,10 +179,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -240,10 +240,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -335,10 +335,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -396,10 +396,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -472,10 +472,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -542,10 +542,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -603,10 +603,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -695,10 +695,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -773,10 +773,10 @@ resource "aws_wafv2_web_acl" "main" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                             content {
                                               # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -834,10 +834,10 @@ resource "aws_wafv2_web_acl" "main" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                             content {
                                               # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -919,10 +919,10 @@ resource "aws_wafv2_web_acl" "main" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                             content {
                                               # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -996,10 +996,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1057,10 +1057,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1149,10 +1149,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1215,10 +1215,10 @@ resource "aws_wafv2_web_acl" "main" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                       content {
                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                       }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1275,10 +1275,10 @@ resource "aws_wafv2_web_acl" "main" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                       content {
                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                       }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1372,10 +1372,10 @@ resource "aws_wafv2_web_acl" "main" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                       content {
                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                       }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1432,10 +1432,10 @@ resource "aws_wafv2_web_acl" "main" {
                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                       content {
                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                       }
                     }
                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1510,10 +1510,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1571,10 +1571,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1656,10 +1656,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1735,10 +1735,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1796,10 +1796,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1891,10 +1891,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -1952,10 +1952,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2076,10 +2076,10 @@ resource "aws_wafv2_web_acl" "main" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                             content {
                                               # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2137,10 +2137,10 @@ resource "aws_wafv2_web_acl" "main" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                             content {
                                               # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2236,10 +2236,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2297,10 +2297,10 @@ resource "aws_wafv2_web_acl" "main" {
                                       for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                       content {
                                         # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                        # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                        included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                        excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                       }
                                     }
                                     oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2402,10 +2402,10 @@ resource "aws_wafv2_web_acl" "main" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                             content {
                                               # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2463,10 +2463,10 @@ resource "aws_wafv2_web_acl" "main" {
                                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                             content {
                                               # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                             }
                                           }
                                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2556,22 +2556,22 @@ resource "aws_wafv2_web_acl" "main" {
                           name = lower(lookup(single_header.value, "name"))
                         }
                       }
-                    }
-                    dynamic "headers" {
-                      for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
-                      content {
-                        match_scope = lower(lookup(headers.value, "match_scope"))
-                        dynamic "match_pattern" {
-                          for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
-                          content {
-                            # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                            # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                            # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                            included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                            excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                      dynamic "headers" {
+                        for_each = length(lookup(field_to_match.value, "headers", {})) == 0 ? [] : [lookup(field_to_match.value, "headers")]
+                        content {
+                          match_scope = lower(lookup(headers.value, "match_scope"))
+                          dynamic "match_pattern" {
+                            for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
+                            content {
+                              # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
+                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                            }
                           }
+                          oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                         }
-                        oversize_handling = lower(lookup(headers.value, "oversize_handling"))
                       }
                     }
                   }
@@ -2625,10 +2625,10 @@ resource "aws_wafv2_web_acl" "main" {
                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                             content {
                               # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                             }
                           }
                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2726,10 +2726,10 @@ resource "aws_wafv2_web_acl" "main" {
                             for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                             content {
                               # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                              # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                              # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                              included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                              excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                             }
                           }
                           oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2797,10 +2797,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2858,10 +2858,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -2959,10 +2959,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3024,10 +3024,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3085,10 +3085,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3186,10 +3186,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3262,10 +3262,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3323,10 +3323,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3424,10 +3424,10 @@ resource "aws_wafv2_web_acl" "main" {
                               for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                               content {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                               }
                             }
                             oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3488,10 +3488,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3549,10 +3549,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
@@ -3650,10 +3650,10 @@ resource "aws_wafv2_web_acl" "main" {
                                     for_each = length(lookup(headers.value, "match_pattern", {})) == 0 ? [] : [lookup(headers.value, "match_pattern", {})]
                                     content {
                                       # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
-                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
-                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern, "excluded_headers") == null ? lookup(match_pattern, "included_headers") : null
-                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern, "included_headers") == null ? lookup(match_pattern, "excluded_headers") : null
+                                      # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
+                                      included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
+                                      excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
                                     }
                                   }
                                   oversize_handling = lower(lookup(headers.value, "oversize_handling"))
