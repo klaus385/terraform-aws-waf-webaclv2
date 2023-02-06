@@ -181,7 +181,7 @@ resource "aws_wafv2_web_acl" "main" {
                                 # all              = lookup(match_pattern.value, "all", "{}") == "{}" && lookup(match_pattern.value, "included_headers") == null && lookup(match_pattern, "excluded_headers") == null ? "{}" : null
                                 # included_headers = lookup(match_pattern.value, "included_headers") == lookup(match_pattern.value, "included_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "excluded_headers") == null ? lookup(match_pattern.value, "included_headers") : null
                                 # excluded_headers = lookup(match_pattern.value, "excluded_headers") == lookup(match_pattern.value, "excluded_headers") && lookup(match_pattern.value, "all", "{}") == null && lookup(match_pattern.value, "included_headers") == null ? lookup(match_pattern.value, "excluded_headers") : null
-                                included_headers = [lookup(match_pattern.value, "included_headers")]
+                                included_headers = lookup(match_pattern.value, "included_headers")
                                 # excluded_headers = lower(lookup(match_pattern.value, "excluded_headers")) == lower(lookup(match_pattern.value, "excluded_headers")) && lower(lookup(match_pattern.value, "included_headers")) == null ? lower(lookup(match_pattern.value, "excluded_headers")) : null
                               }
                             }
